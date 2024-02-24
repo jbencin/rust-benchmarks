@@ -1,3 +1,48 @@
+# for_loop_with_new vs for_loop_with_vec_capacity vs iterator
+## 1 word benchmarking
+
+```shell
+for_loop_encoding_vec_new
+time:   [117.36 ns 117.57 ns 117.83 ns]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+
+for_loop_encoding_vec_with_capacity
+time:   [115.21 ns 115.64 ns 116.09 ns]
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+
+iterator_encoding       
+time:   [121.07 ns 121.36 ns 121.68 ns]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+```
+
+## 1000 words benchmarking
+
+```shell
+for_loop_encoding_vec_new
+time:   [109.43 µs 109.84 µs 110.25 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+
+for_loop_encoding_vec_with_capacity
+time:   [106.90 µs 107.86 µs 109.23 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+
+iterator_encoding       
+time:   [122.76 µs 123.29 µs 123.84 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+```
+
+# for_loop vs iterator
 ## 1 word benchmarking
 
 ### First run
