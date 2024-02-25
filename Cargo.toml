@@ -11,5 +11,9 @@ edition = "2021"
 criterion = "0.5.1"
 
 [[bench]]
-name = "first_benchmark"
+name = "string_to_vec"
+harness = false
+
+[[bench]]
+name = "flatten_bytes"
 harness = false
